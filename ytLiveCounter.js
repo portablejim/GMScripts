@@ -1,6 +1,10 @@
 // ==UserScript==
-// @name     Youtube live uptime counter
+// @name     Youtube live play uptime counter
+// @description Shows the play position of the video from the start of a livestream. When watching at the live position, this should be the uptime.
+// @author Portablejim
+// @namespace https://github.com/portablejim/GMScripts
 // @version  1
+// @license      GPL
 // @grant    none
 // @match https://www.youtube.com/watch*
 // ==/UserScript==
