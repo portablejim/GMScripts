@@ -3,7 +3,7 @@
 // @description Shows the play position of the video from the start of a livestream. When watching at the live position, this should be the uptime.
 // @author Portablejim
 // @namespace https://github.com/portablejim/GMScripts
-// @version  1
+// @version  2
 // @license      GPL
 // @grant    none
 // @match https://www.youtube.com/watch*
@@ -30,6 +30,7 @@
                     console.log('Uptime counter: Heading found');
                     let timeCodeEl = document.createElement('p');
                     timeCodeEl.id = 'liveUptime';
+                    timeCodeEl.style.display = 'inline-block';
                     timeCodeEl.style.marginInlineStart = '16px';
                     timeCodeEl.timeoutId = intervalId;
                     headingEl.appendChild(timeCodeEl);
