@@ -15,8 +15,9 @@
 (function() {
     'use strict';
 
-    document.addEventListener('yt-navigate-finish', () =>
+    let attach = () =>
     {
+      console.log('Uptime counter: Init.');
       if (document.querySelector('.ytp-live-badge') && document.querySelector('.ytp-live-badge').getAttribute('disabled') !== 'true')
       {
         let videoEl = document.querySelector('video');
@@ -40,7 +41,7 @@
                     liveUptimeEl = timeCodeEl;
                 }
             }
-            
+
             if(liveUptimeEl)
             {
                 const SECONDS_IN_HOUR = 60*60;
@@ -56,9 +57,15 @@
           })(videoEl.currentTime);
         }, 200);
       }
+      else if(!document.querySelector('h1'))
+      {
+        console.log('Uptime counter: No heading yet, wait.');
+        setTimeout(attach, 1000);
+      }
       else
       {
         console.log('Uptime counter: Not a live video');
       }
-    });
+    };
+    setTimeout(attach, 1000);
 })();
