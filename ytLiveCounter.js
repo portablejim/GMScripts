@@ -7,6 +7,9 @@
 // @license      GPL
 // @grant    none
 // @match https://www.youtube.com/watch*
+// @match https://youtube.com/watch*
+// @match https://www.youtube.com/live/*
+// @match https://youtube.com/live/*
 // ==/UserScript==
 
 (function() {
